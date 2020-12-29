@@ -38,7 +38,7 @@ public class ContentGenerator implements Scan<String> {
         String clien_query=fragmented[1]+';'+fragmented[2];
         String Query_mode=fragmented[0];
         List<String> result;
-        System.out.println("The query mode is " + Query_mode+ ".");
+        //System.out.println("The query mode is " + Query_mode+ ".");
         result=this.scans.get(Query_mode).inquire(clien_query);
         
         String output="";

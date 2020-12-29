@@ -22,8 +22,20 @@ public class Client {
             BufferedReader in = new BufferedReader(
                 new InputStreamReader(socket.getInputStream()));
         ) {
+            out.println(query);
+            long start = System.currentTimeMillis();
             String fromServer;
- 
+            while ((fromServer = in.readLine()) != null) {
+                System.out.println("Response: "+fromServer);
+                if (fromServer.equals("done")) {
+                    long duration = System.currentTimeMillis() - start;
+                    //out.println(duration);
+                    System.out.println(duration);
+                    break;
+                }
+            }
+            
+            /*
             while (!(fromServer = in.readLine()).equals(ConnectionHandler.HANGUP)) {
                 if (fromServer.equals(ConnectionHandler.HANDSHAKE)) {
                     out.println(query);
@@ -31,6 +43,7 @@ public class Client {
                     System.out.println("Response: " + fromServer);
                 }
             }
+            */
         } catch (UnknownHostException e) {
             System.err.println("Don't know about host " + hostName);
             System.exit(1);
