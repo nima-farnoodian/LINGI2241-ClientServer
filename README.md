@@ -17,5 +17,5 @@ client through the network and send back the requested result to the client.
 
 ## Warning messages
 *Please note:*
-The *ClientInBatch* requires five arguments that specifies a server host, server port, server version (simple or optimize), the number of clients, an input file that includes example regular expersion (just its address and name with '.txt'), and mean of expo. dist. 
+The *ClientInBatch* requires five arguments that specifies a server host, server port, server version (simple or optimize), the number of clients, an input file that includes example regular expersion (just its address and name with '.txt'), and mean of expo. dist. (For Regular Experssion example format, Please see regs.txt. The experssions in this file are mostly heavy and intensive queries. We used this file for our simulation)
 Also Notice that you should place your database under the directory LINGI2241-ClientServer/src/main/resources/. 
