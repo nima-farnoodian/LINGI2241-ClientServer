@@ -14,7 +14,9 @@ client through the network and send back the requested result to the client.
 
 - Run the client
 `java -cp target/serveroptimization-1.0-SNAPSHOT.jar edu.ucl.nima.Client localhost port servermodel;id;"your query between quotes"
+
 For example:
+
 `java -cp target/serveroptimization-1.0-SNAPSHOT.jar edu.ucl.nima.Client localhost 4050 optimized;1;"*.second.*"
 
 ## Warning messages
